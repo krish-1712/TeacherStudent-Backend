@@ -299,12 +299,12 @@ router.get("/teacher/:teacherId", async (req, res) => {
     }
 });
 
-
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
         const user = await userModel.findOne({ email });
+        console.log(user)
 
         if (user) {
             const passwordMatches = await hashCompare(password, user.password);
@@ -340,9 +340,8 @@ router.post('/login', async (req, res) => {
     }
 });
 
-
-
 router.post('/signup', async (req, res) => {
+
     try {
         let user = await userModel.findOne({ email: req.body.email })
         console.log(user)
