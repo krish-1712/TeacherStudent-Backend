@@ -16,7 +16,7 @@ const { userModel } = require('../Schemas/UserSchemas');
 
 
 mongoose.connect(dbUrl)
-  .then(() => console.log('Connected!',dbUrl));
+  .then(() => console.log('Connected!'));
 
 
 var router = express.Router();
