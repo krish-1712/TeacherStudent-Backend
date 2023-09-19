@@ -427,7 +427,7 @@ router.post("/reset", async (req, res) => {
 });
 
 
-router.post('/password-reset', async (req, res, next) => {
+router.post('/password', async (req, res, next) => {
 
 
     try {
